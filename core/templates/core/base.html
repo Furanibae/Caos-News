@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'core/images/icons/favicon.png' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/fonts/linearicons-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/slick/slick.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/MagnificPopup/magnific-popup.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/main.css' %}">	
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+<!--===============================================================================================-->
+<script src="https://kit.fontawesome.com/7431470b54.js" crossorigin="anonymous"></script> 
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+  <!--MODAL BÚSQUEDA-->
+  <div class="modal fade" id="modalsearch">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+  
+  <div class="modal-body">
+	<form action="{% url 'detalle' %}">
+	  <div class="row">
+		<div class="col-sm-4">
+		  <form>
+			<h6 class="mb-4">Categorias</h6>
+			<input type="checkbox" id="opcion1" name="opcion1" value="opcion1">
+			<label for="opcion1">Tendencias</label><br>
+  
+			<input type="checkbox" id="opcion2" name="opcion2" value="opcion2">
+			<label for="opcion2">Deportes</label><br>
+  
+			<input type="checkbox" id="opcion3" name="opcion3" value="opcion3">
+			<label for="opcion3">Econonomía</label><br>
+  
+			<input type="checkbox" id="opcion4" name="opcion4" value="opcion4">
+			<label for="opcion4">Nacional</label><br>
+  
+			<input type="checkbox" id="opcion5" name="opcion5" value="opcion5">
+			<label for="opcion5">Educación</label><br>
+  
+		  </form> 
+		</div>
+		<div class="col-sm-6">
+		  <form action="{% url 'detalle' %}">
+			<label for="fname">Buscar:</label><br>
+			<input type="text" id="fname" name="buscarN" value=""><br>
+			<label for="lname">Nombre Periodista:</label><br>
+			<input type="text" id="lname" name="Npero" placeholder="nombre Periodista"><br><br>
+			<input type="submit" value="Buscar">
+		  </form> 
+		</div>
+	  </div> 
+  </div>
+  <!-----------------------------------MODAL FOOTER----------------------------------------->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+</div>
+  </div>
+  </div>
+  </div>
+  <!--FIN MODAL BÚSQUEDA-->
+  
+  <!--------------------------------------------INICIO NAV----------------------------------------------->
+  <nav class="navbar sticky-top navbar-expand-lg navcolor">
+	<div class="container">
+	  <img src="{% static 'core/images/CAOS.png' %}" width="15%" alt="logo">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto ml-5 mb-2 mb-lg-0">
+		  <li class="nav-item">
+			<a class="nav-link linknav" href="{% url 'index' %}">INICIO</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link linknav" href="{% url 'noticias_aceptadas' %}">DESTACADAS</a>
+		  </li>
+		 
+		
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle linknav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  CATEGORÍAS
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item" href="{% url 'detalle' %}">Tendencias</a>
+			  <a class="dropdown-item" href="{% url 'detalle' %}">Deportes</a>
+			  <a class="dropdown-item" href="{% url 'detalle' %}">Economía</a>
+			  <a class="dropdown-item" href="{% url 'detalle' %}">Nacional</a>
+			  <a class="dropdown-item" href="{% url 'detalle' %}">Educación</a>
+			  <a class="dropdown-item" href="{% url 'detalle' %}">Tecnología</a>
+			</div>
+		  </li>
+		</ul>
+		<li class="nav-item">
+			<a class="nav-link linknav" href="#" data-toggle="modal" data-target="#modalsearch">BUSCAR</a>
+		  </li>
+
+		  <div class="d-flex ml-auto">
+			{% if user.is_authenticated %}
+				{% if user.is_staff %}
+					<li class="nav-item">
+					<a class="nav-link linknav" href="{% url 'indexAdmin' %}">ADMINISTRACION</a>
+			 		</li>
+					
+				{%else%}
+				
+				{%endif%}
+				
+				{% for group in user.groups.all %}
+				{% if group.name == 'Editor' %}
+				<li class="nav-item">
+					<a class="nav-link linknav" href="{% url 'listanoticias' %}">REVISIÓN</a>
+				</li>
+				{% endif %}
+				{% endfor %}
+
+				{% for group in user.groups.all %}
+				{% if group.name == 'Periodistas' %}
+					<li class="nav-item">
+						<a class="nav-link linknav" href="{% url 'formulario' %}">SUBIR NOTICIA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link linknav" href="{% url 'noticias_usuarios' %}">MIS NOTICIAS</a>
+					</li>
+				{% endif %}
+				{% endfor %}
+				<a class="nav-link linknav" href="{% url 'cart_detail' %}">Ver Carrito</a>
+				<form action="{% url 'logout' %}" method="post" class="form-inline">
+					{% csrf_token %}
+					<button type="submit" class="btn btn-link nav-link linknav">Cerrar sesión</button>
+				</form>
+			{% else %}
+				<a class="nav-link linknav" href="{% url 'register' %}" data-target="#Registro">REGISTRO</a>
+		
+
+				<a class="nav-link linknav ml-4" href="{% url 'login' %}" data-target="#Login">LOG IN</a>
+
+			{% endif %}
+		</div>
+	  </div>
+	</div>
+  </nav>  
+  <!--------------------------------------------FIN NAV-------------------------------------------------->
+  
+
+		<!--INICIO CONTENIDO-->
+        {% block contenido %}
+        
+
+
+
+
+
+        {% endblock %}
+		<!--FIN CONTENIDO-->
+
+
+
+<!--Footer-->
+<footer class="fooforma">
+	<div class="container-fluid ml-5 pl-5 pt-5 pb-5 text-white">
+		<div class="row">
+		  <div class="col-md-3 col-sm-12">
+			<img src="{% static 'core/images/CAOS.png' %}" class="logo-footer" alt="logo">
+			<div class="hrdesta mt-3 mb-3">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, quod sapiente minus ipsum inventore impedit est adipisci labore, recusandae ex, doloribus quas voluptatibus molestiae voluptatem? Minus error minima maiores et.</p>
+				<a id="iconosfooter" href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+				<a id="iconosfooter" href="#"><i class="fa-brands fa-square-facebook"></i></a>
+				<a id="iconosfooter" href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+			</div>
+		  </div>
+  		
+		<div class="col-md-4 col-sm-12 pl-5 pr-5">
+	  		<a class="nav-link linknav"  href="#">INICIO</a>
+	   		<a class="nav-link linknav" href="{% url 'detalle' %}">DESTACADAS</a>  
+	  		<div class="entrete-txt">
+				<p class="pl-3 mt-2">CATEGORÍAS</p>  
+	  			<a class="nav-link linknav"  href="{% url 'detalle' %}">Tendencias</a>
+				<a class="nav-link linknav"  href="{% url 'detalle' %}">Deportes</a>
+				<a class="nav-link linknav"  href="{% url 'detalle' %}">Econonomía</a>
+				<a class="nav-link linknav"  href="{% url 'detalle' %}">Nacional</a>
+				<a class="nav-link linknav"  href="{% url 'detalle' %}">Educación</a>
+				<a class="nav-link linknav"  href="{% url 'detalle' %}">Tecnología</a>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-12 text-start pl-5">
+			<h1>Contacto</h1>
+				<div class="hrdesta mb-3">
+					<form>
+						<div class="form-group">
+								<div class="form-inline">
+									<label for="inputNombre" class="form-label mt-1 mr-2">Nombre</label>
+									<input type="text" class="form-control mb-1" id="inputNombre" placeholder="Ej: Lucho">
+								</div>
+								<div class="form-inline">
+									<label for="inputApellido" class="form-label mt-2 mr-2">Apellido</label>
+									<input type="text" class="form-control mb-1" id="inputApellido" placeholder="Ej: jara">
+								</div>
+								<div class="form-inline">
+									<label for="inputcorreo" class="form-label mt-2 mr-3">Correo</label>
+									<input type="email" class="form-control mb-1" id="exampleFormControlInput1" placeholder="tucorreo@gmail.com">
+								</div>
+								<div class="form-inline">
+									<label for="inputNumero" class="form-label mt-2 mr-1">Teléfono</label>
+									<input type="tel" class="form-control mb-1 mr-4" id="inputNumero" placeholder="+569 98765432">
+								</div>
+								<div class="form-inline">
+									<label for="txtcomentario" class="form-label mt-2 pr-2">Mensaje</label>
+									<textarea class="form-control pr-4 pb-5" id="txtcomentario"></textarea>
+								</div>
+								<div class="d-flex justify-content-start ml-5 pl-3">
+									<input class="btn mt-3 btn-logout btn-sm" type="submit" value="Enviar">
+								</div>
+								
+						</div>
+					</form>	
+			    </div>
+		</div>
+	</div>
+	<!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+	</div>
+
+
+  </footer>
+  <!--END  Footer-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!--===============================================================================================-->	
+	<script src="{% static 'core/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'core/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/select2/select2.min.js' %}"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'core/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/slick/slick.min.js' %}"></script>
+	<script src="{% static 'core/js/slick-custom.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/parallax100/parallax100.js' %}"></script>
+	<script>
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/MagnificPopup/jquery.magnific-popup.min.js' %}"></script>
+	<script>
+		$('.gallery-lb').each(function() { // the containers for all your galleries
+			$(this).magnificPopup({
+		        delegate: 'a', // the selector for gallery item
+		        type: 'image',
+		        gallery: {
+		        	enabled:true
+		        },
+		        mainClass: 'mfp-fade'
+		    });
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/isotope/isotope.pkgd.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/sweetalert/sweetalert.min.js' %}"></script>
+	<script>
+		$('.js-addwish-b2').on('click', function(e){
+			e.preventDefault();
+		});
+
+		$('.js-addwish-b2').each(function(){
+			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-b2');
+				$(this).off('click');
+			});
+		});
+
+		$('.js-addwish-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-detail');
+				$(this).off('click');
+			});
+		});
+
+		/*---------------------------------------------*/
+
+		$('.js-addcart-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+	
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			$(this).css('position','relative');
+			$(this).css('overflow','hidden');
+			var ps = new PerfectScrollbar(this, {
+				wheelSpeed: 1,
+				scrollingThreshold: 1000,
+				wheelPropagation: false,
+			});
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/js/main.js' %}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="{% static 'core/js/funcionalidades.js' %}"></script>
+  
+</body>
+</html>

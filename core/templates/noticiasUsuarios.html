@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<div class="container pt-5">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de Noticias</h1>
+    </div>
+  </div>
+
+  {% for noticia in noticias %}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ noticia.titular }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Por: {{ noticia.nombre_redactor }}</h6>
+      <p class="card-text">{{ noticia.subtitulo }}</p>
+
+      <!-- Contenido colapsable -->
+      <div class="collapse" id="collapseNoticia{{ noticia.id }}">
+        <div class="mt-3">
+          <p>{{ noticia.cuerpo }}</p>
+          <img src="{{ noticia.imagen.url }}" alt="Imagen de la noticia" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Botones de Acción y Estado -->
+      <div class="row">
+        <div class="col">
+          <p class="mt-2"><strong>Estado:</strong> {{ noticia.estado }}</p>
+        </div>
+        <div class="col text-right">
+          <button class="btn btn-primary mb-2" type="button" data-toggle="collapse" data-target="#collapseNoticia{{ noticia.id }}" aria-expanded="false" aria-controls="collapseNoticia{{ noticia.id }}">
+            Ver más
+          </button>
+          <a href="{% url 'editar_noticia' noticia.id %}" class="btn btn-secondary {% if noticia.estado == 'Publicada' %}disabled{% endif %}">Editar</a>
+          <form action="{% url 'borrar_noticia' noticia.id %}" method="POST" class="d-inline">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de querer eliminar esta noticia?')">Eliminar</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

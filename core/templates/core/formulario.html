@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<div class="container pt-5">
+  <div class="row d-flex justify-content-center">
+    {% if noticia %}
+      <h1 class="categ-txt pl-1">Editar Noticia</h1>
+    {% else %}
+      <h1 class="categ-txt pl-1">Subir Noticia</h1>
+    {% endif %}
+  </div>    
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8">
+      <form id="formulario-noticia" method="post" {% if noticia %} action="{% url 'editar_noticia' noticia.id %}" {% else %} action="{% url 'procesar_noticia' %}" {% endif %} enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if noticia %}
+          <input type="hidden" name="noticia_id" value="{{ noticia.id }}">
+        {% endif %}
+        
+        <input type="text" class="form-control form-control-lg mt-3" placeholder="Titular" name="titular" value="{% if noticia %}{{ noticia.titular }}{% endif %}">
+        <input type="text" class="form-control mt-3 mb-3" placeholder="Subtitulo" name="subtitulo" value="{% if noticia %}{{ noticia.subtitulo }}{% endif %}">
+        
+        <textarea class="form-control mb-3" rows="5" id="comment" name="cuerpo" placeholder="Cuerpo de la noticia">{% if noticia %}{{ noticia.cuerpo }}{% endif %}</textarea>
+        
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Nombre redactor" name="nombre_redactor" value="{% if noticia %}{{ noticia.nombre_redactor }}{% endif %}">
+          </div>
+          <div class="col-md-4">
+            <input type="date" class="form-control" name="fecha" value="{% if noticia %}{{ noticia.fecha }}{% endif %}">
+          </div>
+          <div class="col-md-4">
+            <input type="file" class="form-control-file" name="archivo_adjunto">
+          </div>
+        </div>
+        
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="col-md-4">
+            <select class="form-control" name="categoria">
+              <option value="Tendencias" {% if noticia and noticia.categoria == 'Tendencias' %}selected{% endif %}>Tendencias</option>
+              <option value="Deportes" {% if noticia and noticia.categoria == 'Deportes' %}selected{% endif %}>Deportes</option>
+              <option value="Econonomía" {% if noticia and noticia.categoria == 'Econonomía' %}selected{% endif %}>Econonomía</option>
+              <option value="Nacional" {% if noticia and noticia.categoria == 'Nacional' %}selected{% endif %}>Nacional</option>
+              <option value="Educación" {% if noticia and noticia.categoria == 'Educación' %}selected{% endif %}>Educación</option>
+              <option value="Tecnología" {% if noticia and noticia.categoria == 'Tecnología' %}selected{% endif %}>Tecnología</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Código" name="codigo" value="{% if noticia %}{{ noticia.codigo }}{% endif %}">
+          </div>
+        </div>
+        
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">{% if noticia %}Guardar cambios{% else %}Subir Noticia{% endif %}</button>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

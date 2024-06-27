@@ -1,0 +1,246 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+	<!-- Slider -->
+	<section class="section-slide">
+		<div class="wrap-slick1">
+			<div class="slick1">
+                <!--cuando hay una img inserta en una etiqueta style (como css) la ruta debe ser url(static/core/rutaqueyateníalaimg);-->
+				<div class="item-slick1" style="background-image: url(static/core/images/NBA.jpg);">
+					<div class="container h-full">
+						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
+								<span class="ltext-101 cl2 respon2">
+									Women Collection 2018
+								</span>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+									NEW SEASON
+								</h2>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
+								<a href="{% url 'detalle' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+									Shop Now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-slick1" style="background-image: url(static/core/images/bilGates.avif);">
+					<div class="container h-full">
+						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
+								<span class="ltext-101 cl2 respon2">
+									Men New-Season
+								</span>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
+								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+									Jackets & Coats
+								</h2>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
+								<a href="{% url 'detalle' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+									Shop Now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-slick1" style="background-image: url(static/core/images/Whatsapp.avif);">
+					<div class="container h-full">
+						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
+								<span class="ltext-101 cl2 respon2">
+									Men Collection 2018
+								</span>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
+								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+									New arrivals
+								</h2>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
+								<a href="" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+									Shop Now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  
+  <!--BODY-->
+  <div class="container">  
+      <section id="text-center">
+          <h2 class="mt-5 text-center categ-txt p-3">¡Te podria interesar!</h2>
+          <hr>
+         
+  <div class="row">
+    <!-- ROW 1 CARD-->
+    <!--CUERPO TARJETA 1.1-->
+            <div class="row">
+              <div class="col-md-6 col-ms-12">
+                <div class="card tarjeta ms-5 mb-3">
+                  <div class="row">
+                    <div class="col-4 img-foco">
+                      <!--INSERCIÓN DE LA IMG VÍA CSS-->
+                    </div>
+                    <div class="col-8">
+                      
+                      <div class="card-body">
+                        <p class="cat-card text-center">Economía</p>
+                        <h4 class="card-title"><a href="{% url 'detalle' %}" class="link-card">Ley norma</a></h4>
+                        <p class="card-text"><small>Estabiliza las tarifas eléctricas y crea subsidio para hogares vulnerables </small></p>
+                        <p>La propuesta busca estabilizar los precios de electricidad, 
+                          mitigando las alzas proyectadas para las cuentas de los clientes regulados.</p>
+                        <p class="card-text">
+                        <small class="text-muted">hace 3 horas</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+          <!--CUERPO TARJETA .2-->
+          <div class="col-md-6 col-ms-12">
+            <div class="card tarjeta ms-5 mb-3">
+              <div class="row">
+                <div class="col-4 img-foco">
+                  <!--INSERCIÓN DE LA IMG VÍA CSS-->
+                </div>
+                <div class="col-8">
+                  
+                  <div class="card-body">
+                    <p class="cat-card text-center">Economía</p>
+                    <h4 class="card-title"><a href="{% url 'detalle' %}" class="link-card">Ley norma</a></h4>
+                    <p class="card-text"><small>Estabiliza las tarifas eléctricas y crea subsidio para hogares vulnerables </small></p>
+                    <p>La propuesta busca estabilizar los precios de electricidad, 
+                      mitigando las alzas proyectadas para las cuentas de los clientes regulados.</p>
+                    <p class="card-text">
+                    <small class="text-muted">hace 3 horas</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>                 
+  <!--FIN ROW CARD 1-->
+  
+  <!-- ROW 2 CARD-->
+  <!--CUERPO TARJETA 2.1-->
+  <div class="row">
+    <div class="col-md-6 col-ms-12">
+      <div class="card tarjeta ms-5 mb-3">
+        <div class="row">
+          <div class="col-4 img-foco">
+            <!--INSERCIÓN DE LA IMG VÍA CSS-->
+          </div>
+          <div class="col-8">
+            
+            <div class="card-body">
+              <p class="cat-card text-center">Economía</p>
+              <h4 class="card-title"><a href="{% url 'detalle' %}" class="link-card">Ley norma</a></h4>
+              <p class="card-text"><small>Estabiliza las tarifas eléctricas y crea subsidio para hogares vulnerables </small></p>
+              <p>La propuesta busca estabilizar los precios de electricidad, 
+                mitigando las alzas proyectadas para las cuentas de los clientes regulados.</p>
+              <p class="card-text">
+              <small class="text-muted">hace 3 horas</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!--CUERPO TARJETA 2.2-->
+  <div class="col-md-6 col-ms-12">
+    <div class="card tarjeta ms-5 mb-3">
+      <div class="row">
+        <div class="col-4 img-foco">
+          <!--INSERCIÓN DE LA IMG VÍA CSS-->
+        </div>
+        <div class="col-8">
+          
+          <div class="card-body">
+            <p class="cat-card text-center">Economía</p>
+            <h4 class="card-title"><a href="{% url 'detalle' %}" class="link-card">Ley norma</a></h4>
+            <p class="card-text"><small>Estabiliza las tarifas eléctricas y crea subsidio para hogares vulnerables </small></p>
+            <p>La propuesta busca estabilizar los precios de electricidad, 
+              mitigando las alzas proyectadas para las cuentas de los clientes regulados.</p>
+            <p class="card-text">
+            <small class="text-muted">hace 3 horas</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>            
+  <!--FIN ROW CARD 2-->
+              
+  
+    <!-- ROW 3 CARD-->
+    <div class="row">
+      <!--CUERPO TARJETA 3.2-->
+      <div class="col-md-6 col-ms-12">
+        <div class="card tarjeta ms-5 mb-3">
+          <div class="row">
+            <div class="col-4 img-foco">
+              <!--INSERCIÓN DE LA IMG VÍA CSS-->
+            </div>
+            <div class="col-8">
+              
+              <div class="card-body">
+                <p class="cat-card text-center">Economía</p>
+                <h4 class="card-title"><a href="{% url 'detalle' %}" class="link-card">Ley norma</a></h4>
+                <p class="card-text"><small>Estabiliza las tarifas eléctricas y crea subsidio para hogares vulnerables </small></p>
+                <p>La propuesta busca estabilizar los precios de electricidad, 
+                  mitigando las alzas proyectadas para las cuentas de los clientes regulados.</p>
+                <p class="card-text">
+                <small class="text-muted">hace 3 horas</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  <!--CUERPO TARJETA 3.2-->
+  <div class="col-md-6 col-ms-12 pb-5">
+    <div class="card tarjeta ms-5 mb-3">
+      <div class="row">
+        <div class="col-4 img-foco">
+          <!--INSERCIÓN DE LA IMG VÍA CSS-->
+        </div>
+        <div class="col-8">
+          
+          <div class="card-body">
+            <p class="cat-card text-center">Economía</p>
+            <h4 class="card-title"><a href="{% url 'detalle' %}" class="link-card">Ley norma</a></h4>
+            <p class="card-text"><small>Estabiliza las tarifas eléctricas y crea subsidio para hogares vulnerables </small></p>
+            <p>La propuesta busca estabilizar los precios de electricidad, 
+              mitigando las alzas proyectadas para las cuentas de los clientes regulados.</p>
+            <p class="card-text">
+            <small class="text-muted">hace 3 horas</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>                             
+  <!--FIN ROW CARD 3-->         
+  </div>            
+  
+  </div>
+
+
+{% endblock %}

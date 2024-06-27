@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+
+{% block contenido %}
+<div class="container mt-5 pt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <h2>Tu cuenta ha sido bloqueada por tantos intentos fallidos. Espera 1 minuto y vuelve a intentarlo.</h2>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-5"></div>
+    <div class="pb-5"></div>
+
+</div>
+
+
+<!-- Incluye los archivos JS de Bootstrap si usas 'bootstrap4' -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'js/alerts.js' %}"></script>
+<script src="{% static 'core/js/funcionalidades.js' %}"></script>
+
+
+{% endblock %}

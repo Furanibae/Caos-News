@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load cart_tag %}
+
+{% block content %}
+<h1>Cart Detail</h1>
+
+Total Length: {{ cart|length }}
+
+Cart Detail:
+{% for product_id, product in cart.items %}
+    <img src="{{ value.image }}" width="120" height="80"><br>
+    {{ value.name }}<br>
+    {{ value.price }}<br>
+    {{ value.quantity }}<br>
+    Total: {{ value.price|multiply:value.quantity }}<br>
+    {% for product_id, product in cart.items %}
+    <!-- ... -->
+    <a href="{% url 'item_increment' product.id %}">Increment</a>
+    <a href="{% url 'item_decrement' product.id %}">Decrement</a>
+    <a href="{% url 'item_clear' product.id %}">Remove</a><br><br>
+{% endfor %}
+{% endfor %}
+<a href="{% url 'cart_clear' %}">Clear Cart</a>
+{% endblock %}

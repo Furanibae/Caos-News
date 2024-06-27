@@ -1,0 +1,203 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<!--CONTENIDO-->
+  <!--BREADCRUMBS-->
+  <section class="migas pt-4">
+    <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}" class="miga-link">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="#" class="miga-link">Nacional</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Investigan presunto sicariato</li>
+      </ol>
+    </nav>
+  </div>
+  </section>
+    <!--FIN BREADCRUMBS-->
+    
+  <section class="detalle-noti">
+  <div class="container pt-4">
+    <div class="row">
+    <div class="col-md-1 col-sm-12"></div>  
+    <div class="col-md-3 col-sm-12">
+    <P class="categ-txt p-2">Nacional</P>
+    </div>
+    <div class="col-md-1 col-sm-12"></div>  
+    </div>
+  
+    <div class="row">
+    <div class="col-md-1 col-sm-12"></div>
+  <div class="col-md-10 col-sm-12 img-container">
+    <div class="hero-img">
+      <!--INSERCIÓN DE HERO IMAGE EN CSS-->
+    
+    <div class="hero-txt">
+      <p><span class="subti-txt">Investigan presunto sicariato: </span><br>  
+      <span class="ti-txt">Segundo homicidio en menos de 24 horas en Viña del Mar</p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <small><span class="reco-autor">Reportaje por: </span>
+          <a href="{% url 'periodista' %}" class="autor">Juan Carlos Bodoque</a><br>
+          <span class="datos-noti">5 de Abril, 22:45 | Viña del Mar, Chile</span>
+        </small>
+      </div>
+  
+      <div class="col-md-6 col-sm-12 text-end">
+        <small><p class="datos-noti mb-1">Compartir</small></p>
+        <a href="#"><i id="iconos" class="fa-brands fa-square-whatsapp"></i></a>
+        <a href="#"><i id="iconos" class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i id="iconos" class="fa-brands fa-square-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1 col-sm-12"></div>
+  </div>
+  </div>
+  
+  <!--DESARROLLO NOTICIA-->
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-1 col-sm-12"></div>
+      <div class="col-md-10 col-sm-12">
+        <hr class="mt-2 mb-5 hr-detalle">
+      </div>    
+      <div class="col-md-1 col-sm-12"></div>
+    </div>
+      <div class="row text-start pt-3">
+        <div class="col-md-1 col-sm-12"></div>
+          <div class="cont-noti col-md-5 col-sm-12">
+            <p>
+              <span class="bajada-txt">"Lorem ipsum dolor sit amet consectetur 
+                adipisi elit. Rerum, reiciendis!"<br> <br></span>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Error eligendi itaque, provident dicta asperiores temporibus esse numquam ut, 
+          expedita in rerum nesciunt consequuntur consectetur officiis necessitatibus ab, 
+          deserunt voluptatum distinctio accusamus unde nam placeat consequatur. Aspernatur, 
+          repellendus totam? Quod optio voluptatum exercitationem, quam doloremque perferendis, 
+          dolor necessitatibus, quo fugit dicta sunt provident qui. Ipsam repellendus debitis in porro hic, 
+          at perspiciatis amet assumenda pariatur laudantium velit molestiae dignissimos nisi rem numquam 
+          labore aspernatur asperiores incidunt aliquid cum quo dicta quidem!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Assumenda esse hic quas, soluta maiores officiis blanditiis? 
+          Impedit, atque obcaecati provident placeat porro consectetur a in, 
+          facilis consequuntur sunt perspiciatis dolorem nobis voluptatem officiis 
+          nulla facere veniam, necessitatibus sed architecto. Expedita. <br>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Error eligendi itaque, provident dicta asperiores temporibus esse numquam ut, 
+          expedita in rerum nesciunt consequuntur consectetur officiis necessitatibus ab, 
+          deserunt voluptatum distinctio accusamus unde nam placeat consequatur. Aspernatur, 
+          repellendus totam? Quod optio voluptatum exercitationem, quam doloremque perferendis, 
+          dolor necessitatibus, quo fugit dicta sunt provident qui. Ipsam repellendus debitis in porro hic, 
+          at perspiciatis amet assumenda pariatur laudantium velit molestiae dignissimos nisi rem numquam 
+          labore aspernatur asperiores incidunt aliquid cum quo dicta quidem!
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> <br>
+          <span class="bajada-txt">¿Lorem ipsum dolor sit?</span> <br>
+          Error eligendi itaque, provident dicta asperiores temporibus esse numquam ut, 
+          expedita in rerum nesciunt consequuntur consectetur officiis necessitatibus ab, 
+          deserunt voluptatum distinctio accusamus unde nam placeat consequatur. Aspernatur, 
+          repellendus totam? Quod optio voluptatum exercitationem, quam doloremque perferendis, 
+          dolor necessitatibus, quo fugit dicta sunt provident qui. Ipsam repellendus debitis in porro hic, 
+          at perspiciatis amet assumenda pariatur laudantium velit molestiae dignissimos nisi rem numquam 
+          labore aspernatur asperiores incidunt aliquid cum quo dicta quidem!
+        </p>
+          </div>
+          <div class="cont-noti col-md-5 col-sm-12">
+          <p>
+          <span class="bajada-txt">¿Error eligendi itaque? <br></span>
+          Error eligendi itaque, provident dicta asperiores temporibus esse numquam ut, 
+          expedita in rerum nesciunt consequuntur consectetur officiis necessitatibus ab, 
+          deserunt voluptatum distinctio accusamus unde nam placeat consequatur. Aspernatur, 
+          repellendus totam? Quod optio voluptatum exercitationem, quam doloremque perferendis, 
+          dolor necessitatibus, quo fugit dicta sunt provident qui. Ipsam repellendus debitis in porro hic, 
+          at perspiciatis amet assumenda pariatur laudantium velit molestiae dignissimos nisi rem numquam 
+          labore aspernatur asperiores incidunt aliquid cum quo dicta quidem! <br>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Error eligendi itaque, provident dicta asperiores temporibus esse numquam ut, 
+          expedita in rerum nesciunt consequuntur consectetur officiis necessitatibus ab, 
+          deserunt voluptatum distinctio accusamus unde nam placeat consequatur. <br><br>
+          <span class="bajada-txt">Lorem ipsum, dolor sit amet consectetur</span> <br>
+          Aspernatur, repellendus totam? Quod optio voluptatum exercitationem, quam doloremque perferendis, 
+          dolor necessitatibus, quo fugit dicta sunt provident qui. Ipsam repellendus debitis in porro hic, 
+          at perspiciatis amet assumenda pariatur laudantium velit molestiae dignissimos nisi rem numquam 
+          labore aspernatur asperiores incidunt aliquid cum quo dicta quidem!
+  <br>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Error eligendi itaque, provident dicta asperiores temporibus esse numquam ut, 
+          expedita in rerum nesciunt consequuntur consectetur officiis necessitatibus ab, 
+          deserunt voluptatum distinctio accusamus unde nam placeat consequatur. Aspernatur, 
+          repellendus totam? Quod optio voluptatum exercitationem, quam doloremque perferendis, 
+          dolor necessitatibus, quo fugit dicta sunt provident qui. Ipsam repellendus debitis in porro hic, 
+          at perspiciatis amet assumenda pariatur laudantium velit molestiae dignissimos nisi rem numquam 
+          labore aspernatur asperiores incidunt aliquid cum quo dicta quidem!
+        </p>
+          </div>
+          <div class="col-md-1 col-sm-12"></div>
+      </div>
+  </div>
+  </section>
+  <!--FIN DESARROLLO NOTICIA-->
+  
+  <!--NOTICIAS DE INTERES-->
+  <section class="int-noti">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 col-sm-12"></div>
+        <div class="col-md-10 col-sm-12">
+          <hr class="mt-2 mb-5 hr-detalle">
+          <P class="categ-txt p-2 ">Te podría interesar</P>
+  
+          <div class="row my-5 text-start">
+  
+            <div class="col-md-3 col-sm-12 mb-3">
+              <div class="card" style="width: 15rem;">
+                <img src="{% static 'core/images/images.jpg' %}" class="card-img-top" alt="cñora loca">
+                <div class="card-body">
+                  <p class="cat-card text-center">Nacional</p>
+                  <h5 class="card-title"><a href="{% url 'index' %}" class="link-card">Mujer en estado etílico repercute 3 balazos en Lo Valledor</a></h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3 col-sm-12 mb-3">
+              <div class="card" style="width: 15rem;">
+                <img src="{% static 'core/images/images.jpg' %}" class="card-img-top" alt="cñora loca">
+                <div class="card-body">
+                  <p class="cat-card text-center">Nacional</p>
+                  <h5 class="card-title"><a href="{% url 'index' %}" class="link-card">Mujer en estado etílico repercute 3 balazos en Lo Valledor</a></h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3 col-sm-12 mb-3">
+              <div class="card" style="width: 15rem;">
+                <img src="{% static 'core/images/images.jpg' %}" class="card-img-top" alt="cñora loca">
+                <div class="card-body">
+                  <p class="cat-card text-center">Nacional</p>
+                  <h5 class="card-title"><a href="{% url 'index' %}" class="link-card">Mujer en estado etílico repercute 3 balazos en Lo Valledor</a></h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3 col-sm-12 mb-5">
+              <div class="card" style="width: 15rem;">
+                <img src="{% static 'core/images/images.jpg' %}" class="card-img-top" alt="cñora loca">
+                <div class="card-body">
+                  <p class="cat-card text-center">Nacional</p>
+                  <h5 class="card-title"><a href="{% url 'index' %}" class="link-card">Mujer en estado etílico repercute 3 balazos en Lo Valledor</a></h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+      </div>
+   </section>
+
+
+
+{% endblock %}

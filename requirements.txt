@@ -1,0 +1,19 @@
+#IMPORTANTE: 
+#BORRAR LOS COMENTARIOS ANTES DE EJECUTAR
+#Todo esto se debe instalar desde CMD
+#pip install -r requirements.txt
+
+django
+django-admin-interface
+django_crispy_forms
+django-bootstrap4
+crispy-bootstrap4
+django-admin-confirm
+django-axes
+django-simple-captcha
+django-recaptcha
+django-multi-captcha-admin
+django-shopping-cart
+djangorestframework
+django-filter
+markdown
